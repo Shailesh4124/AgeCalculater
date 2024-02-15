@@ -77,6 +77,7 @@ Year.addEventListener('keyup', (event) => {
   if (Year.value.length > 4) {
     Year.value = Year.value.slice(0, 4);
   }
+ 
 });
 const Day = document.getElementById('day');
 
@@ -84,10 +85,10 @@ Day.addEventListener('keyup', (event) => {
   if (Day.value.length > 2) {
     Day.value = Day.value.slice(0, 2);
   }
-  if (Day.value > 12) {
-    Day.value = 12; // Or display an error message
+  if (Day.value > 31) {
+    Day.value = ""; // Or display an error message
   } else if (Day.value < 1) {
-    Day.value = 1; // Or display an error message
+    Day.value = ""; // Or display an error message
   }
 });
 const Month= document.getElementById('month');
@@ -95,5 +96,10 @@ const Month= document.getElementById('month');
 Month.addEventListener('keyup', (event) => {
   if (Month.value.length > 2) {
     Month.value = Month.value.slice(0, 2);
+  }
+  if (Month.value > 12) {
+    Month.value = ""; // Or display an error message
+  } else if (Month.value < 1) {
+    Month.value = ""; // Or display an error message
   }
 });
