@@ -84,6 +84,11 @@ Day.addEventListener('keyup', (event) => {
   if (Day.value.length > 2) {
     Day.value = Day.value.slice(0, 2);
   }
+  if (Day.value > 12) {
+    Day.value = 12; // Or display an error message
+  } else if (Day.value < 1) {
+    Day.value = 1; // Or display an error message
+  }
 });
 const Month= document.getElementById('month');
 
