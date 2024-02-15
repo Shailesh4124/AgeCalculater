@@ -69,3 +69,26 @@ activationBtn.onclick = () => {
 function isLeapYear(year) {
     return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
 }
+
+
+const Year = document.getElementById('year');
+
+Year.addEventListener('keyup', (event) => {
+  if (Year.value.length > 4) {
+    Year.value = Year.value.slice(0, 4);
+  }
+});
+const Day = document.getElementById('day');
+
+Day.addEventListener('keyup', (event) => {
+  if (Day.value.length > 2) {
+    Day.value = Day.value.slice(0, 2);
+  }
+});
+const Month= document.getElementById('month');
+
+Month.addEventListener('keyup', (event) => {
+  if (Month.value.length > 2) {
+    Month.value = Month.value.slice(0, 2);
+  }
+});
